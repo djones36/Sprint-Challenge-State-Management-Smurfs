@@ -16,6 +16,7 @@ const SmurfForm = () => {
         Height:
         <Field type="text" name="height" placeholder="Height" />
       </label>
+      <button type="submit">Create New Smurf</button>
     </Form>
   );
 };
