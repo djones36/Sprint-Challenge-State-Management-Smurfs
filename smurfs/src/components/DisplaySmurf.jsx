@@ -6,8 +6,8 @@ const DisplaySmurf = () => {
   return (
     <div className="display_smurf">
       <h2>Current Smurfs in the village</h2>
-      <SmurfForm />
       <Smurf />
+      <SmurfForm />
     </div>
   );
 };
