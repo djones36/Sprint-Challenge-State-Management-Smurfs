@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Field, withFormik } from "Formik";
+import { Form, Field, withFormik } from "formik";
 
 const SmurfForm = () => {
   return (
@@ -20,4 +20,14 @@ const SmurfForm = () => {
   );
 };
 
-export default SmurfForm;
+const FormikSmurfForm = withFormik({
+  mapPropsToValues({ name, age, height }) {
+    return {
+      name: name || "",
+      age: age || "",
+      height: height || ""
+    };
+  }
+})(SmurfForm);
+
+export default FormikSmurfForm;
