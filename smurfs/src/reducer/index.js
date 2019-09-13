@@ -36,7 +36,25 @@ export const reducer = (state = intialState, action) => {
         error: "action.payload"
       };
     //Playing God as I create a new smurf
-
+    case POST_SMURF_START:
+      return {
+        ...state,
+        isLoading: true,
+        error: ""
+      };
+    case POST_SMURF_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        smurf: action.payload,
+        error: ""
+      };
+    case POST_SMURF_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        error: "action.payload"
+      };
     default:
       return state;
   }
