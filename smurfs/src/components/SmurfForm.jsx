@@ -6,15 +6,15 @@ const SmurfForm = () => {
     <Form>
       <label>
         Name:
-        <Field />
+        <Field type="text" name="name" placeholder="name" />
       </label>
       <label>
         Age:
-        <Field />
+        <Field type="text" name="age" placeholder="age" />
       </label>
       <label>
         Height:
-        <Field />
+        <Field type="text" name="height" placeholder="Height" />
       </label>
     </Form>
   );
