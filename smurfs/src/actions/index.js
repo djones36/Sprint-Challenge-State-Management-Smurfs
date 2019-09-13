@@ -17,7 +17,7 @@ export const getSmurf = () => dispatch => {
       dispatch({ type: FETCHING_SMURF_SUCCESS, payload: res.data });
     })
     .catch(err => {
-      dispatch({ type: FETCHING_SMURF_FAILURE, payload: res.data });
+      dispatch({ type: FETCHING_SMURF_FAILURE, payload: "failure" });
     });
 };
 
@@ -33,6 +33,6 @@ export const sendSmurftoThePromiseLand = () => dispatch => {
       dispatch({ type: POST_SMURF_SUCCESS, payload: res.data });
     })
     .catch(err => {
-      dispatch({ type: POST_SMURF_START, payload: res.data });
+      dispatch({ type: POST_SMURF_START, payload: "failure" });
     });
 };
