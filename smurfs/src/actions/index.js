@@ -25,11 +25,7 @@ export const getSmurf = () => dispatch => {
 export const sendSmurftoThePromiseLand = () => dispatch => {
   dispatch({ type: POST_SMURF_START });
   axios
-    .post("http://localhost:3333/smurfs", {
-      name: "",
-      age: "",
-      height: ""
-    })
+    .post("http://localhost:3333/smurfs", sendSmurftoThePromiseLand)
     .then(res => {
       dispatch({ type: POST_SMURF_SUCCESS, payload: res.data });
     })

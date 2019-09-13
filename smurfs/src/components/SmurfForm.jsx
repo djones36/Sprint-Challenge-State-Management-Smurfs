@@ -1,7 +1,9 @@
 import React from "react";
 import { Form, Field, withFormik } from "formik";
+import { connect } from "react-redux";
+import { sendSmurftoThePromiseLand } from "../actions";
 
-const SmurfForm = () => {
+const SmurfForm = (props, { values, handleSubmit, status }) => {
   return (
     <Form>
       <label>
@@ -28,7 +30,21 @@ const FormikSmurfForm = withFormik({
       age: age || "",
       height: height || ""
     };
+  },
+  handleSubmit(values, { props, resetForm, setSubmitting }) {
+    props.sendSmurftoThePromiseLand(values);
+    resetForm("");
+    setSubmitting(false);
   }
 })(SmurfForm);
 
-export default FormikSmurfForm;
+const mapStateToProps = state => {
+  return {
+    smurf: state.smurf
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  { sendSmurftoThePromiseLand }
+)(FormikSmurfForm);
