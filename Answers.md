@@ -18,6 +18,8 @@ the component state is the parent child relationship. only the child has access 
 
 1. Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
 
+Redux-thunk is middleware that lets use call action creators. this allow us to do asynchronous requests with our action creators.
+
 1. What is your favorite state management system you've learned and this sprint? Please explain why!
 
    my favorite state management is context because it can make use of the reducer and it just seemed easier for me to learn at first. But after so much practice with redux this week its starting to grow on me.
