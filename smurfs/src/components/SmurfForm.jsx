@@ -2,10 +2,10 @@ import React from "react";
 import {Form, Field, withFormik} from "Formik";
 
 
-const Form = () => {
+const SmurfForm = () => {
   return(
 
   ) 
 };
 
-export default Form;
+export default SmurfForm;
