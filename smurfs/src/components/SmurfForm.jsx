@@ -12,11 +12,11 @@ const SmurfForm = (props, { values, handleSubmit, status }) => {
       </label>
       <label>
         Age:
-        <Field type="text" name="age" placeholder="age" />
+        <Field type="number" name="age" placeholder="age" />
       </label>
       <label>
         Height:
-        <Field type="text" name="height" placeholder="Height" />
+        <Field type="number" name="height" placeholder="Height" />
       </label>
       <button type="submit">Create New Smurf</button>
     </Form>
