@@ -9,6 +9,7 @@ export const POST_SMURF_SUCCESS = "POST_SMURF_SUCCESS";
 export const POST_SMURF_FAILURE = "POST_SMURF_FAILURE";
 
 export const getSmurf = () => dispatch => {
+  console.log("smurf start action");
   dispatch({ type: FETCHING_SMURF_START });
   axios
     .get("http://localhost:3333/smurfs")
